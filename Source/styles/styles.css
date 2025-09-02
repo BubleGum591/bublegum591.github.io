@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.block {
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.block1 {
+    display: flex;
+    grid-column: 1 / 4;
+    grid-row: 1;
+    background-color: #bbdefb;
+    justify-content: space-between;
+}
+
+
+.block2 {
+    grid-column: 1;
+    grid-row: 2 / span 4;
+    background-color: #c8e6c9;
+}
+
+.block2 img {
+    padding-left: 20px ;
+    background-color: #c8e6c9;
+}
+
+.block3 {
+    grid-column: 2;
+    grid-row: 4 / 5;
+    background-color: #f0f4c3;
+}
+
+.block4 {
+    grid-column: 3;
+    grid-row: 2 / 5;
+    background-color: #ffecb3;
+}
+
+.block-y {
+    grid-column: 2 / span 2;
+    grid-row: 5;
+    background-color: #c5cae9;
+    text-align: center;
+}
+
+.menu {
+    grid-column: 2;
+    grid-row: 2 / span 2;
+    background-color: #f5f5f5;
+}
+
+.menu ul, .menu ol {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.menu a {
+    color: #1976d2;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    
+    .block {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+    }
+}
